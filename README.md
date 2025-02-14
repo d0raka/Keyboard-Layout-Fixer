@@ -26,10 +26,9 @@ The tool features a clean, modern interface inspired by Apple's design principle
 Built using:
 - **HTML5**, **CSS3**, and **JavaScript**
 - Responsive design for mobile and desktop compatibility
-- Apple-inspired UI/UX for a clean and modern look
 
 ## Live Demo
-Try the live version here: [Keyboard Layout Fixer](#) *(Replace `#` with your live URL)*
+Try the live version here: [Keyboard Layout Fixer](#) 
 
 ## Installation
 1. Clone the repository:
