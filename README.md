@@ -4,7 +4,7 @@
 
 **Keyboard Layout Fixer** is a simple, web-based tool designed to resolve common typing errors caused by incorrect keyboard layouts between English and Hebrew. Whether you've accidentally typed in the wrong layout or need to convert text quickly, this tool ensures seamless translation with just one click.
 
-The tool features a clean, modern interface inspired by Apple's design principles, offering a user-friendly experience for fixing mistyped text. It dynamically supports both English and Hebrew interfaces, allowing users to switch languages effortlessly. The responsive design ensures compatibility across all devices, including desktops, tablets, and mobile phones.
+The tool features a clean, modern interface, offering a user-friendly experience for fixing mistyped text. It dynamically supports both English and Hebrew interfaces, allowing users to switch languages effortlessly. The responsive design ensures compatibility across all devices, including desktops, tablets, and mobile phones.
 
 ## Key Features
 - **Real-Time Conversion**: Instantly translates mistyped text into the correct keyboard layout.
