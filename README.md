@@ -34,12 +34,9 @@ Try the live version here: [Keyboard Layout Fixer]([#](https://d0raka.github.io/
 1. Clone the repository:
    ```bash
    git clone https://github.com/your-username/Keyboard-Layout-Fixer.git
-   
-
 ---
 
 ### **Part 6: Contributing and License**
-markdown
 ## Contributing
 Contributions are welcome! If you'd like to enhance the tool or add new features, feel free to submit a pull request. Please ensure your code adheres to the existing style and structure.
 
