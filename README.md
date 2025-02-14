@@ -1,6 +1,6 @@
 # Keyboard Layout Fixer
 
-![Banner](https://prnt.sc/SjaBz_XVu7aQ)
+![Banner](https://prnt.sc/1MSMQUZtat6_)
 
 **Keyboard Layout Fixer** is a simple, web-based tool designed to resolve common typing errors caused by incorrect keyboard layouts between English and Hebrew. Whether you've accidentally typed in the wrong layout or need to convert text quickly, this tool ensures seamless translation with just one click.
 
@@ -35,3 +35,17 @@ Try the live version here: [Keyboard Layout Fixer](#) *(Replace `#` with your li
 1. Clone the repository:
    ```bash
    git clone https://github.com/your-username/Keyboard-Layout-Fixer.git
+
+---
+
+### **Part 6: Contributing and License**
+```markdown
+## Contributing
+Contributions are welcome! If you'd like to enhance the tool or add new features, feel free to submit a pull request. Please ensure your code adheres to the existing style and structure.
+
+## License
+This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
+
+---
+
+Made with ❤️ by [Dor Aka](https://github.com/d0raka)
