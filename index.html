@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyboard Layout Fixer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box; /* Ensures padding and borders are included in element dimensions */
+        }
+        body {
+            font-family: 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Full viewport height */
+            margin: 0;
+            background: url('https://i.redd.it/g2jff9yl5mz51.jpg') no-repeat center center fixed; /* Subtle gradient-like background */
+            background-size: cover;
+            color: #333;
+            overflow: hidden; /* Prevent scrollbars */
+        }
+        /* Navigation Bar */
+        nav {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px; /* Reduced padding for a cleaner look */
+            background: rgba(255, 255, 255, 0); /* Fully transparent background */
+            backdrop-filter: blur(10px); /* Frosted glass effect */
+            z-index: 1000;
+        }
+        .logo-placeholder img {
+            height: 40px; /* Adjust the height of the logo */
+            cursor: pointer;
+        }
+        .language-switcher {
+            background: #007aff; 
+            color: white;
+            border: none;
+            padding: 5px 10px; /* Smaller button size */
+            border-radius: 5px; /* Slightly rounded corners */
+            margin-left: 1700px;
+            cursor: pointer;
+            font-size: 14px; /* Match the logo size */
+            transition: background 0.3s ease;
+        }
+        .language-switcher:hover {
+            background: #005bb5; /* Darker blue on hover */
+        }
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 500px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-top: 80px; /* Space for the navbar */
+            margin-bottom: 20px; /* Space for the footer */
+        }
+        .container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        h2 {
+            font-size: 24px;
+            font-weight: 600;
+            color: #1d1d1f;
+            margin-bottom: 25px;
+        }
+        input {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            border: 1px solid #d2d2d7;
+            border-radius: 10px;
+            font-size: 16px;
+            font-family: inherit;
+            transition: border-color 0.3s ease;
+        }
+        input:focus {
+            outline: none;
+            border-color: #007aff;
+            box-shadow: 0 0 0 3px rgba(0, 122, 255, 0.2);
+        }
+        button {
+            width: 100%;
+            padding: 15px;
+            background: #007aff;
+            border: none;
+            color: white;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: background 0.3s ease;
+        }
+        button:hover {
+            background: #005bb5;
+        }
+        .output-box {
+            margin-top: 20px;
+            padding: 15px;
+            background: #f7f7f7;
+            border: 1px solid #d2d2d7;
+            border-radius: 10px;
+            font-size: 18px;
+            color: #1d1d1f;
+            word-break: break-word;
+            min-height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        p {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #6e6e73;
+        }
+        /* Footer */
+        footer {
+            position: absolute;
+            bottom: 10px;
+            font-size: 14px;
+            color: #ffffff;
+            opacity: 0.8;
+            text-align: center;
+            width: 100%;
+        }
+        footer a {
+            color: #007aff;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            h2 {
+                font-size: 20px;
+            }
+            input, button {
+                font-size: 14px;
+                padding: 12px;
+            }
+            .output-box {
+                font-size: 16px;
+            }
+            footer {
+                font-size: 12px;
+            }
+            .logo-placeholder img {
+                height: 30px; /* Smaller logo for mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo-placeholder">
+            <a href="#">
+                <img src="https://i.ibb.co/Jjn5B37D/logo1-removebg-preview.png" alt="logo1-removebg-preview" border="0">
+            </a>
+        </div>
+        <button class="language-switcher" id="languageSwitcher">עברית</button>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <h2 id="pageTitle">Fix Mistyped Keyboard Layout</h2>
+        <input type="text" id="inputText" placeholder="Enter mistyped text...">
+        <button onclick="fixText()" id="fixButton">Fix Text</button>
+        <div class="output-box" id="outputBox">Your fixed text will appear here.</div>
+        <p id="description">A simple tool to fix keyboard layout issues between English and Hebrew.</p>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2023 All rights reserved | Created by <b>Dor Aka</b>
+    </footer>
+
+    <script>
+        // Mapping for English to Hebrew characters
+        const engToHeb = {
+            "a": "ש", "b": "נ", "c": "ב", "d": "ג", "e": "ק", "f": "כ", "g": "ע",
+            "h": "י", "i": "ן", "j": "ח", "k": "ל", "l": "ך", "m": "צ", "n": "מ",
+            "o": "ם", "p": "פ", "q": "/", "r": "ר", "s": "ד", "t": "א", "u": "ו",
+            "v": "ה", "w": "'", "x": "ס", "y": "ט", "z": "ז"
+        };
+
+        // Hebrew translations for the UI elements
+        const translations = {
+            en: {
+                pageTitle: "Fix Mistyped Keyboard Layout",
+                fixButtonText: "Fix Text",
+                description: "A simple tool to fix keyboard layout issues between English and Hebrew.",
+                languageSwitcher: "עברית",
+                inputPlaceholder: "Enter mistyped text...",
+                outputDefault: "Your fixed text will appear here."
+            },
+            he: {
+                pageTitle: "מתקן טעות הקלדה בין אנגלית לעברית",
+                fixButtonText: "תתקן לי",
+                description: "כלי פשוט לתקן בעיות פריסת מקלדת בין אנגלית לעברית.",
+                languageSwitcher: "English",
+                inputPlaceholder: "הזן טקסט...",
+                outputDefault: "הטקסט המתוקן יופיע כאן."
+            }
+        };
+
+        // Function to translate the page
+        let currentLanguage = "en"; // Default language
+        function toggleLanguage() {
+            if (currentLanguage === "en") {
+                currentLanguage = "he";
+            } else {
+                currentLanguage = "en";
+            }
+
+            // Update UI elements based on the selected language
+            document.getElementById("pageTitle").innerText = translations[currentLanguage].pageTitle;
+            document.getElementById("fixButton").innerText = translations[currentLanguage].fixButtonText;
+            document.getElementById("description").innerText = translations[currentLanguage].description;
+            document.getElementById("languageSwitcher").innerText = translations[currentLanguage].languageSwitcher;
+
+            // Update input placeholder and output default text
+            document.getElementById("inputText").placeholder = translations[currentLanguage].inputPlaceholder;
+            document.getElementById("outputBox").innerText = translations[currentLanguage].outputDefault;
+
+            // If switching to Hebrew, ensure RTL direction for the main content only
+            document.querySelector('.container').style.direction = currentLanguage === "he" ? "rtl" : "ltr";
+        }
+
+        // Attach the language switcher event listener
+        document.getElementById("languageSwitcher").addEventListener("click", toggleLanguage);
+
+        // Function to fix the text
+        function fixText() {
+            let input = document.getElementById("inputText").value.toLowerCase();
+            let output = input.split('').map(char => engToHeb[char] || char).join('');
+            document.getElementById("outputBox").innerText = output || translations[currentLanguage].outputDefault;
+        }
+    </script>
+</body>
+</html>
