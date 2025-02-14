@@ -28,13 +28,13 @@ Built using:
 - Responsive design for mobile and desktop compatibility
 
 ## Live Demo
-Try the live version here: [Keyboard Layout Fixer](#) 
+Try the live version here: [Keyboard Layout Fixer]([#](https://d0raka.github.io/Keyboard-Layout-Fixer/)) 
 
 ## Installation
 1. Clone the repository:
    ```bash
    git clone https://github.com/your-username/Keyboard-Layout-Fixer.git
-   ```
+```markdown
 
 ---
 
