@@ -35,6 +35,7 @@ Try the live version here: [Keyboard Layout Fixer](#) *(Replace `#` with your li
 1. Clone the repository:
    ```bash
    git clone https://github.com/your-username/Keyboard-Layout-Fixer.git
+   ```
 
 ---
 
