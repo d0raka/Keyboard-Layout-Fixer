@@ -1,4 +1,4 @@
-# Keyboard Layout Fixer
+![image](https://github.com/user-attachments/assets/e297aa9e-4524-4f5f-96de-e9a82dffa8a9)![image](https://github.com/user-attachments/assets/b007f9b7-d744-49e8-afa4-3ec5f7fb4787)# Keyboard Layout Fixer
 
 [Banner](https://prnt.sc/1MSMQUZtat6)
 
@@ -19,8 +19,8 @@ The tool features a clean, modern interface, offering a user-friendly experience
 3. The tool automatically converts the text into the correct layout and displays the result.
 
 ### Example
-- **Input (English Layout)**: `hello`
-- **Output (Hebrew Layout)**: `הדגככ`
+- **Input (English Layout)**: `akuo`
+- **Output (Hebrew Layout)**: `שלום`
 
 ## Technologies Used
 Built using:
